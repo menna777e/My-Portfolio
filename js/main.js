@@ -1,4 +1,27 @@
+// navbar
 
+(() =>{
+
+    document.addEventListener("click", (event) =>{
+        if(event.target.classList.contains("link")){
+            if(event.target.hash !== ""){
+                event.preventDefault();
+                const hash = event.target.hash;
+                // deactivate active section
+                document.querySelector(".section.active").classList.add("hide")
+                document.querySelector(".section.active").classList.remove("active")
+                // activate new section
+                document.getElementById(hash).classList.add("active")
+                document.getElementById(hash).classList.remove("hide")
+            document.querySelector(".link.active").classList.add("outer-shadow")
+            document.querySelector(".link.active").classList.remove("active", "inner-shadow") 
+            event.target.classList.add("active","inner-shadow")
+            window.location.hash = hash;
+        }
+    }   
+    })
+
+})();
 // navigation menu
 
 (() => {
@@ -23,6 +46,7 @@
 
 
     document.addEventListener("click", (event) =>{
+        console.log(event.target.classList)
         if(event.target.classList.contains("link-item")){
             if(event.target.hash !== ""){
                 event.preventDefault();
@@ -50,7 +74,6 @@
                 else{
                     let navItems = navMenu.querySelectorAll(".link-item");
                     navItems.forEach(item => {
-                        
                         if( hash === item.hash){
                             console.log(item)
                             item.classList.remove("outer-shadow","hover-in-shadow")

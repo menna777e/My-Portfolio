@@ -1,6 +1,14 @@
 
 @media (max-width: 767px) {
 
+    .hamburger-btn{
+        opacity:1 !important;
+    }
+
+    .navbar-links {
+        display:none !important;
+    }
+
     .home-section .home-text{
         order:2;
         text-align: center;
@@ -28,7 +36,7 @@
         right:4%;
     }
     .header .hamburger-btn{
-        margin-right: -5%;
+        margin-right: -3%;
     }
 
     .about-section{
