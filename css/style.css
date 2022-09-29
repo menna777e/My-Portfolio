@@ -113,7 +113,7 @@ img{
 }
 
 .section.hide{
-    /* display: none; */
+    display: none;
 }
 
 .effect-wrap .effect{
@@ -147,7 +147,7 @@ img{
     height:180px;
     border:25px solid var(--skin-color);
     border-radius:50%;
-    left: 50%;
+    left: 38%;
     top: -120px;
     animation:leftBounce 3s ease-in-out infinite;
 }
@@ -282,6 +282,7 @@ img{
     cursor: pointer;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
+    opacity: 0;
 }
 .header .hamburger-btn::after{
     border-radius: 50%;
@@ -293,6 +294,30 @@ img{
     margin:2.5px 0;
     background-color: var(--bg-black-900);
 }
+
+/* navbar */
+
+.navbar-links{
+    display:block !important;
+}
+.navbar-links ul{
+    display:flex;
+    justify-content:space-between;
+}
+.navbar-links ul li a{
+    font-size:20px;
+    font-weight: 600;
+    color: var(--text-black-700);
+    padding:5px 10px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    transition: all 0.3s ease
+}
+.navbar-links ul li a:hover,
+.navbar-links ul li a .active{
+    color: var(--skin-color);
+}
+
 
 /* navigation menu */
 .nav-menu{
@@ -381,10 +406,12 @@ img{
     transition: all 0.3s ease
 }
 
-.nav-menu ul li a::after{
+.nav-menu ul li a::after,
+.navbar-links ul li a::after{
     border-radius: 30px;
 }
-.nav-menu ul li a.active{
+.nav-menu ul li a.active,
+.navbar-links ul li a.active{
     color: var(--skin-color) ;
 }
 
@@ -428,6 +455,7 @@ img{
 
 .home-section .home-img .img-box{
     max-width: 450px;
+    max-height: 450px;
     display:block;
     margin:auto;
     border-radius:50%;
@@ -435,6 +463,9 @@ img{
 }
 .home-section .home-img .img-box img{
     width:100%;
+    height:400px;
+    object-fit: cover;
+    object-position: 0 -20px;
     border-radius:50%;
     border:10px solid transparent;
 }
@@ -451,6 +482,10 @@ img{
 .about-section .about-img .img-box img{
     border:10px solid transparent;
     border-radius: 5px;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: -9px -22px;
 }
 .about-section .about-img .social-links{
     text-align:center;
