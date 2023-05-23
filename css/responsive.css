@@ -25,6 +25,10 @@
     }
     .home-section .home-img .img-box{
         max-width: 350px;
+        
+    }
+    .home-section .home-img .img-box img{
+        max-height: 320px;
     }
     .effect-3{
         left:40%;
@@ -53,6 +57,10 @@
     }
     .about-section .about-img .img-box{
         max-width: 370px;
+        max-height: 370px;
+    }
+    .about-section .about-img .img-box img{
+        object-position:bottom;
     }
     .about-section .about-info a {
         margin: 0 2px;
